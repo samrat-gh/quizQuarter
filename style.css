@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #a8ccab;
+  font-family: poppins;
+  color: black;
+}
+
+/* ====== logo header===== */
+header {
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 5px #000000;
+}
+
+header #logo-text {
+  color: green;
+  font-weight: bolder;
+  font-size: 24px;
+  padding: 0px 0px 0px 6px;
+}
+
+/* ===Welcome text Container== */
+div.welcome {
+  margin: 25px auto;
+  background-color: white;
+  box-shadow: 0px 3px 5px #000000;
+  width: 300px;
+}
+
+div.welcome h3.web-banner {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 2px 4px 2px 4px;
+  background-color: #d0d0d0;
+  color: green;
+  font-weight: bolder;
+  border: 0.5 px solid black;
+}
+
+div.welcome p.description {
+  padding: 5px 7px 7px 5px;
+}
