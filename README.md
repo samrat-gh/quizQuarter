@@ -1,4 +1,4 @@
-# quizQuarter
+# quarterQuiz
 ##### A Quiz Web App project 
 ###### - By Samrat Ghimire
 
