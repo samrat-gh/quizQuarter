@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons Testing</title>
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+     fieldset {
+        outline: none;
+        border: none;
+        font-family: poppins;
+     }
+
+     fieldset legend {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: green;
+     }
+
+     fieldset div.option {
+        display: flex;
+        flex-direction: column;
+     }
+
+     fieldset div.option div{
+        border: 0.5px solid black;
+        max-width: 300px;
+        border-radius: 5px;
+        background-color: #eee;
+        margin-bottom: 12px;
+     }
+
+     
+
+    </style>
+</head>
+<body>
+    <fieldset data-val="Charles Babbage">
+        <legend> Who is known as  the father of Computer?</legend>
+<div class="option">
+    <div>
+        <input type="radio" id="opt1" value="Albert Einstein" name="qn1">
+        <label for="opt1"> Albert Einstein </label>
+    </div>
+
+    <div>
+        <input type="radio" id="opt2" value="Charles Babbage" name="qn1">
+        <label for="opt2"> Charles Babbage </label>
+    </div>
+
+    <div>
+        <input type="radio" id="opt3" value="Benjamin" name="qn1">
+        <label for="opt3"> Benjamin </label>
+    </div>
+
+    <div>
+        <input type="radio" id="opt4" value="Lady Augusta Ada Lovelace" name="qn1">
+        <label for="opt4"> Lady Augusta Ada Lovelace </label>
+    </div>
+    
+
+    </div>   
+    </fieldset>
+
+<button onclick="start()">Submit</button>
+
+    <!-- <fieldset> 
+        <legend>What is the full form of WWW? </legend>
+ 
+    
+
+    </fieldset> -->
+
+    <script>
+     
+     let score = 0;
+     const ansSheet = {
+           qn1: "Charles Babbage",
+           qn2:"Mathew Heyden"
+     }
+
+     const tag = document.querySelector("fieldset");
+
+     const opts = document.querySelectorAll("fieldset div.option div input");
+     console.log(opts);
+
+    function start() {
+
+
+
+
+     opts.forEach((element, ind) => {
+           for(let prop in ansSheet) {
+                 if(element.checked === true && element.value === ansSheet[prop]) {
+                        console.log(element.value, ind, prop);
+                        console.log("You are Correct");
+                        score++;
+            element.parentElement.style.backgroundColor="green";
+            element.parentElement.style.color="white";
+         }
+        }
+
+     });
+    }
+
+     const myObj = {
+        a:"sam",
+        b: "rat",
+        c: "samrat"
+     }
+
+  
+
+       </script>
+
+
+
+</body>
+</html>
