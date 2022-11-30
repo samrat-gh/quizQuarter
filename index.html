@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>quizQuarter - A Quiz App </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>quizQuarter - A Quiz App</title>
+  </head>
+  <body>
     <nav>
-        <h1 id="logo-text"> quizQuarter</h1>
+      <h1 id="logo-text">quizQuarter</h1>
     </nav>
 
     <header>
-        <div class="welcome">
-            <h3 class="welcome-banner"> Welcome to quizQuarter</h3>
-            <p class="description"> I am trying to create a good enviromnent in learning
-                 multiple choice question through the help of this web app. </p>
-        </div>
+      <div class="welcome">
+        <h3 class="welcome-banner">Welcome to quizQuarter</h3>
+        <p class="description">
+          I am trying to create a good enviromnent in learning multiple choice
+          question through the help of this web app.
+        </p>
+      </div>
     </header>
+
+    <div class="score-card">
+      <h5>Result</h5>
+
+      <div class="card-wrap">
+        <p>0<p>
+      <div class="card"> 
+       <div class="card-back"> </div>
+      </div> </div>
+
+      <div class="stats">
+          <p>Total Attempts : <var class="attempt">0</var></p>
+          <p>Unattempted : <var class="unattempted">0</var></p>
+          <p>Correct : <var class="correct">0</var></p>
+          <p>Incorrect : <var class="incorrect">0</var></p>
+      </div>
+      <div class="feedback"> Congratulations</div>
+      <button class="retry"> Retry <span class="retry-icon">&#8634;</span> </button>
+  </div>
+  
+  
+
     <main>
 
     </main>
 
+  
 
-
-<!-- <button onclick="()"> Submit</button> -->
- <script src="script.js"></script>
-    
-</body>
+    <script src="data.js"></script>    
+    <script src="script.js"></script>
+  </body>
 </html>
