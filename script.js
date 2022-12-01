@@ -1,16 +1,15 @@
 
 const main = document.querySelector('main');
-let score = '--score'; //Assinging to CSS Variables
+
 let point = 0;
 let attempt = 0;
 
-
+// Generating foundation elements
   sets.map((element, ind) => {
    
   let fieldset = document.createElement('fieldset');
   let legend = document.createElement('legend');
   let section = document.createElement('section');
-
 
   fieldset = main.appendChild(fieldset);
 
@@ -20,6 +19,7 @@ let attempt = 0;
   section = fieldset.appendChild(section);
   
 
+  // Generating options from nested array
   for (const prop in element) {
     if (prop === "qn" || prop === "id") {
        console.log("wrong Property");
@@ -66,11 +66,11 @@ submitBtn.setAttribute("class", "submit");
 submitBtn = main.appendChild(submitBtn);
 submitBtn.innerText = "Submit";
 
-console.log(submitBtn);
-
 
 let options = Array.from(document.querySelectorAll("fieldset section div input"));
-// console.log(options);
+// options store all the radio type inputs i.e options
+
+
 
 submitBtn.addEventListener('click', ()=> {
    options.map((element) => {
@@ -87,13 +87,14 @@ submitBtn.addEventListener('click', ()=> {
                 attempt++;
 
                 if(ele.key === element.value) {
-                  // console.log("answer is true")
+                  //For Correct Answer
                   point++;
                   element.parentElement.style.backgroundColor="#43b343";
                   element.parentElement.style.color="white";  
 
-                  document.documentElement.style.setProperty(score, point);
-                  console.log(score, "hello", point);
+                  // console.log(score, "hello", point);
+                  // document.documentElement.style.setProperty(score, point);
+                  // console.log(score, "hello", point);
 
                 } 
 
@@ -103,7 +104,7 @@ submitBtn.addEventListener('click', ()=> {
             
                   }
 
-                  updateScore(score, point);
+                  updateScore(point);
               }
             }
 
@@ -115,7 +116,7 @@ submitBtn.addEventListener('click', ()=> {
    })
 });
 
-function updateScore(score, point) {
+function updateScore(point) {
  let element = document.querySelector('.card-back');
 
  document.querySelector('var.correct').innerHTML = point;
@@ -123,18 +124,19 @@ function updateScore(score, point) {
 
  point = aggregrator(point);
  point = point + "%";
- console.log(element);
+ 
  element.style.width=point;
  document.querySelector('.score-card').style.display="block";
  document.querySelector('.card-wrap p').style.paddingLeft = point;
  document.querySelector('.card-wrap p').innerHTML = point;
  document.querySelector('var.attempt').innerHTML = attempt;
+ document.querySelector('var.unattempted').innerHTML = sets.length - attempt;
 }
 
 function aggregrator(score) {
   let fm = sets.length;
   let point = (score/fm)*100;
-  console.log(fm, score, point);
+  // console.log(fm, score, point);
 
   if(point % 1 != 0)
   point = point.toFixed(2);
@@ -145,6 +147,12 @@ function aggregrator(score) {
   // fm is full mark, equals to length of main array gives the no of questions.
 
 
+// Making the retry button reload the page onclick 
+let retryBtn = document.querySelector('.retry');
+
+retryBtn.addEventListener('click', () => {
+location.reload();
+});
 
 
 
