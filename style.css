@@ -119,8 +119,8 @@ button.submit {
 /* ====Score Card==== */
 
 .card-wrap p{
-padding-left: var(--score-position);
-margin-left: -30px;
+/* margin-left: -30px; */
+transition-duration: 1500ms;
 }
 
 
@@ -146,14 +146,14 @@ div.score-card {
   height: 10px;
   background-color: #eee;
   border: 1px solid black;
-
 }
 
 .card-back {
-  width: var(--score);
+  width: 0%;
   height: 10px;
   position: relative;
   background-color: #444343; 
+  transition-duration: 1500ms;
 }
 
 div.feedback {
