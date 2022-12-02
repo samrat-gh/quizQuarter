@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.line{
+            display: none;
+            width: 500px;
+            height: 5px;
+            background-color: black;
+            transition-duration: 1000ms;
+            margin-bottom: 20px;
+        }
+ 
+
+    </style>
+</head>
+<body>
+    <div class="line"></div>
+
+    <button class="sub"> ABC</button>
+
+
+    <script>
+
+let element = document.querySelector('.line');
+
+document.querySelector('.sub').addEventListener('click', ()=> {
+    element .style.display="block";
+    element.style.width="20";
+    setTimeout(() => {
+        element.style.width="1000px"
+    }, 1500)
+
+});
+
+
+    </script>
+</body>
+</html>
